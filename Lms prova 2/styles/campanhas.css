@@ -1,0 +1,267 @@
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #F0F0F0;
+  overflow-x: hidden;
+}
+
+.page-container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-container h2 {
+  margin-right: auto;
+  width: 100vw;
+}
+
+.main-title {
+  color: #343333;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.conteudos-side {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.campanhas-container {
+  width: 80vw;
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-gap: 10px;
+  overflow-x: hidden;
+}
+
+.campanha {
+  background-color: #F0F0F0;
+  width: 300px;
+  height: 450px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  border: 3px;
+  border-color: #d1d1d1;
+  border-style: solid;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.campanha .campanha-img-container {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+
+.campanha .campanha-img-container img {
+  width: 100%;
+  transition: transform 0.5s;
+}
+
+.campanha .campanha-img-container img:hover {
+  transform-origin: center;
+  transform: scale(1.1);
+}
+
+.campanha .campanha-infos {
+  width: 100%;
+  padding: 5px;
+  height: 30%
+}
+
+.campanha .campanha-ajuda-btn-container {
+  width: 100%;
+  height: 20%;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.arrecadar {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.campanha .campanha-ajuda-btn-container button {
+  margin-right: 20px;
+  font-weight: normal;
+  background-color: #FBC656;
+  border: none;
+  color: #343333;
+  padding: 15px;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.campanha .campanha-ajuda-btn-container :first-child {
+  margin-right: auto;
+  align-self: flex-end;
+  padding-bottom: 10px
+}
+
+.campanha .campanha-ajuda-btn-container div :first-child {
+  font-size: 10px;
+  font-weight: normal;
+}
+
+.campanha .campanha-ajuda-btn-container button:hover {
+  background-color: #0d93b5;
+  color: white;
+  transition: background-color 0.5s;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+}
+
+.campanha-ajuda-btn-container {
+  animation: piscar 1s infinite;
+}
+
+@keyframes piscar {
+  0% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.contribuintes-container {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.contribuinte {
+  width: 100%;
+  padding: 5px;
+  border-radius: 15px;
+  border: solid 3px lightgray;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 5px;
+  animation: aparecer 0.5s linear;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.contribuinte .contribuinte-img {
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 100px;
+  background-color: purple;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.contribuinte .contribuinte-img img {
+  height: 40px;
+  width: 40px;
+}
+
+.contribuinte .contribuinte-infos {
+  margin-left: 5px;
+}
+
+.contribuinte .contribuinte-infos div h6 span {
+  color: #FBC656;
+}
+
+.contribuinte .contribuinte-infos div p {
+  font-size: 10px;
+}
+
+.contribuinte .contribuinte-infos div p span {
+  font-weight: bold;
+}
+
+.contribuintes-gradient-overlay {
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  height: 100%;
+  background: #F0F0F0;
+  background: linear-gradient(0deg, rgba(240, 240, 240, 1) 18%, rgba(240, 240, 240, 0) 100%);
+  z-index: 1;
+}
+
+@media screen and (max-width: 600px) {
+
+  .cabecalho {
+    position: fixed;
+    max-height: 100vh;
+  }
+
+  .conteudos-side {
+    flex-direction: column-reverse;
+  }
+
+  .campanhas-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    align-items: center;
+    justify-items: center;
+    overflow-y: auto;
+  }
+
+  .contribuintes-container {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .contribuintes-container .contribuinte {
+    display: none;
+  }
+
+  .contribuintes-container :last-child {
+    display: flex;
+    width: 60%;
+  }
+
+  .contribuinte .contribuinte-infos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contribuinte .contribuinte-infos .contribuicao {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contribuintes-gradient-overlay {
+    display: none;
+  }
+
+}

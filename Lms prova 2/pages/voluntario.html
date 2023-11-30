@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Voluntariado</title>
+
+    <!--  Importanto a fonte FIRA SANS do Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!--  -->
+
+    <script src="../scripts/seazonal_logos.js"></script>
+    <link rel="stylesheet" href="../styles/main_styles.css" />
+    <link rel="stylesheet" href="../styles/voluntario.css" />
+</head>
+
+<body>
+
+    <!--Cabeçalho da página + menu dropdown-->
+    <nav class="cabecalho">
+        <script src="../scripts/nav-bar-insert.js"></script>
+    </nav>
+    <!--  -->
+
+    <section class="page-container">
+        <!--Títulos chamativos-->
+        <h1 class="main-title">Quer ser voluntário?</h1>
+        <p class="main-p">Nos conte um pouco sobre você</p>
+
+        <!-- forms -->
+        <div class="forms-container">
+
+            <form action="">
+                <label for="fname">Nome completo</label><br>
+                <input type="text" id="fname" name="fname" placeholder="Nome" required><br><br>
+                <label for="fname">Cidade</label><br>
+                <select name="cidade" id="cidade" form="cidade">
+                    <option value="bv">Boa Viagem</option>
+                </select>
+
+                <div class="informacao">
+                    <p id="info"></p>
+                    <br>
+                </div>
+
+                <label for="lname">Telefone</label><br>
+                <input type="text" id="telefone" name="telefone" placeholder="Telefone" required><br><br>
+
+                <label for="lname">Email</label><br>
+                <input type="text" id="lname" name="lname" placeholder="Email" required><br><br>
+
+                <label for="lname">Em que você gostaria de atuar na Associação?</label><br>
+                <input type="text" id="lname" name="lname" placeholder="Suas habilidades" required><br><br>
+
+                <label for="lname">Nos conte por que deseja ajudar</label>
+                <br>
+                <input type="text" id="historia" name="historia" placeholder="Conte sua história"><br><br>
+
+                <fieldset>
+                    <legend>Você pode abrigar animais em sua casa?</legend> <br>
+                    <div>
+                        <input type="radio" id="sim" name="abrigar" value="">
+                        <label for="sim">Sim</label><br>
+                    </div>
+                    <div>
+                        <input type="radio" id="nao" name="abrigar" value="">
+                        <label for="nao">Não</label><br>
+                    </div>
+                </fieldset>
+
+                <input type="submit" value="Quero ajudar!">
+            </form>
+        </div>
+    </section>
+
+    <script src="../scripts/scripts.js"></script>
+    <script src="../scripts/side_bar_toggle_phone.js"></script>
+
+</body>
+
+</html>
